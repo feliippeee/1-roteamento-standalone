@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-segundo',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './segundo.component.html',
   styleUrl: './segundo.component.scss'
 })
-export class SegundoComponent implements OnInit  {
+export class SegundoComponent implements OnInit, OnDestroy  {
 
   ngOnInit() {
     console.log('SegundoComponent foi inicializado.');
+  }
+  ngOnDestroy() {
+    console.log('SegundoComponent Destroy.');
   }
 
 }
